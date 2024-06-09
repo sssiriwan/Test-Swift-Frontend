@@ -1,18 +1,20 @@
-import { useState } from "react";
-import "./App.css";
-import { Button } from "antd";
+import React from "react";
+import { ConfigProvider } from "antd";
+import "./App.scss";
+import LanguageSwitcher from "./components/LanguageSwitcher";
+import Shapes from "./components/Shape";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App: React.FC = () => {
   return (
-    <>
-      <div style={{ padding: "50px" }}>
-        <h1>Hello, Vite + Ant Design!</h1>
-        <Button type="primary">Ant Design Button</Button>
+    <ConfigProvider>
+      <div className="App">
+        <div className="language-switcher">
+          <LanguageSwitcher />
+        </div>
+        <Shapes />
       </div>
-    </>
+    </ConfigProvider>
   );
-}
+};
 
 export default App;
