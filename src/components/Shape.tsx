@@ -21,7 +21,7 @@ const Shapes: React.FC = () => {
   const renderShapesForRow = (rowStyle: React.CSSProperties, startIndex: number, endIndex: number) => {
     return Object.keys(positions)
       .slice(startIndex, endIndex + 1)
-      .map((keyStr, index) => {
+      .map((keyStr) => {
         const key = parseInt(keyStr);
         const [row, col] = positions[key];
         return (
